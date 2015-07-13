@@ -27,11 +27,11 @@
 
 
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Insertar Información<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Eventos<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><?php echo $this->Html->link('Crear Proyecto',array('controller'=>'projects','action'=>'add',1,0,0)); ?></li>
+                <li><?php echo $this->Html->link('Crear Evento',array('controller'=>'events','action'=>'add',1,0,0)); ?></li>
 
-                <li><?php echo $this->Html->link('Ver Proyectos',array('controller'=>'projects','action'=>'index')); ?></li>      
+                <li><?php echo $this->Html->link('Ver Eventos',array('controller'=>'events','action'=>'index')); ?></li>      
                          
              
               </ul>
