@@ -1,19 +1,15 @@
 <div class="categories form">
+<br>
+<br>
 <?php echo $this->Form->create('Category'); ?>
 	<fieldset>
-		<legend><?php echo __('Add Category'); ?></legend>
+	<br>
+	<br>
+		<legend> Nueva Categoría </legend>
 	<?php
-		echo $this->Form->input('description');
+		echo $this->Form->input('description', array('label' => array ('text' => 'Descripción:  ', 'class' => 'label-important')));
 	?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+<?php echo $this->Form->end('Guardar'); ?>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
 
-		<li><?php echo $this->Html->link(__('List Categories'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-	</ul>
-</div>

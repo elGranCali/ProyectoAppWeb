@@ -4,14 +4,19 @@
 
         <div class="col-xs-12 col-sm-12">
 	<h2><?php echo __('Control de Aves'); ?></h2>
+	<br>
+		<?php echo $this->Html->link('Registrar ave', array('action' => 'add')); ?>
+	<br>
+	<br>
+	<br>
     <table class="table table-bordered">
 	<thead>
 	<tr>
-			<th><?php echo $this->Paginator->sort('name_'); ?></th>
-			<th><?php echo $this->Paginator->sort('family_'); ?></th>
-			<th><?php echo $this->Paginator->sort('ecology'); ?></th>
-			<th><?php echo $this->Paginator->sort('distribution'); ?></th>
-			<th><?php echo 'Actions'; ?></th>
+			<th> Nombre </th>
+			<th> Familia </th>
+			<th> Ecología </th>
+			<th> Distribución </th>
+			<th> Acciones </th>
 	</tr>
 	</thead>
 	<tbody>
@@ -23,20 +28,14 @@
 		<td><?php echo h($bird['Bird']['distribution']); ?>&nbsp;</td>
 
 		<td class="actions">
-			<?php echo $this->Html->link(__('View'), array('action' => 'view', $bird['Bird']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $bird['Bird']['id'])); ?>
-			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $bird['Bird']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $bird['Bird']['id']))); ?>
+			<?php echo $this->Html->link( 'Ver', array('action' => 'view', $bird['Bird']['id'])); ?>
+			<?php echo $this->Html->link( 'Modificar', array('action' => 'edit', $bird['Bird']['id'])); ?>
+			<?php echo $this->Form->postLink( 'Eliminar', array('action' => 'delete', $bird['Bird']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $bird['Bird']['id']))); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
 	</tbody>
 	</table>
-	<p>
-	<?php
-	echo $this->Paginator->counter(array(
-		'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-	));
-	?>	</p>
 	<div class="paging">
 	<?php
 		echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
