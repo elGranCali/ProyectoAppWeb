@@ -44,6 +44,7 @@
                    }?>
                    <?php if (empty($this->Session->read('Auth.User.username'))){
                        echo '<li><a href="/aves_aplicaciones/users/login">Iniciar sesion</a></li>';
+					   echo '<li><a href="/aves_aplicaciones/users/add">Registrarse</a></li>';
                    }else{
                        echo '<li><a href="/aves_aplicaciones/users/logout">Cerrar sesion</a></li>';
                    }?>
