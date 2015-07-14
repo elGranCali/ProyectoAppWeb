@@ -1,8 +1,7 @@
 <div class="categories index">
 	<h2><?php echo __('Categorías'); ?></h2>
 	<br>
-		<button type="button"><?php echo $this->Html->link('Nueva Categoría', array('action' => 'add')); ?></button>
-		<button type="button"><?php echo $this->Html->link('Consultar Categorías', array('action' => 'index')); ?></button>		
+		<?php echo $this->Html->link('Nueva Categoría', array('action' => 'add')); ?>
 	<br>
 	<br>
 	<br>
