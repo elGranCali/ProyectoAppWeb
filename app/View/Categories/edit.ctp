@@ -1,21 +1,18 @@
 <div class="categories form">
+<br>
+<br>
 <?php echo $this->Form->create('Category'); ?>
 	<fieldset>
-		<legend><?php echo __('Edit Category'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('description');
-	?>
+		<?php echo $this->Html->link('Consultar Categorías', array('action' => 'index'), array ( 'class' => 'btn btn-info')); ?>
+		<br>
+		<br>
+		<legend>Editar Categoría </legend>
+			<div class= "form-group col-md-2 col-md-offset-5 col-lg-2 col-lg-offset-5 col-sm-2 col-sm-offset-5">
+				<?php echo $this->Form->input('id'); ?>
+				<?php echo $this->Form->input('description', array('label' => array ('text' => 'Nombre categoría :  ', 'class' => 'label-important'), 'class' => 'form-control' )); ?>
+				<br>
+				<?php echo $this->Form->submit(__('Guardar'), array ('class' => 'btn btn-success')); ?>
+			</div>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Category.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Category.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Categories'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New User'), array('controller' => 'users', 'action' => 'add')); ?> </li>
-	</ul>
-</div>

@@ -1,23 +1,20 @@
 <div class="events form">
 <?php echo $this->Form->create('Event'); ?>
+	<br>
+	<br>
 	<fieldset>
-		<legend><?php echo __('Edit Event'); ?></legend>
-	<?php
-		echo $this->Form->input('id');
-		echo $this->Form->input('year_');
-		echo $this->Form->input('organization');
-		echo $this->Form->input('description');
-	?>
+		<?php echo $this->Html->link('Consultar Eventos', array('action' => 'index'), array ( 'class' => 'btn btn-info' , 'style' => 'float:right;')); ?>
+		<br>
+		<br>
+	<legend> Modificar Evento </legend>
+		<div class= "form-group col-md-2 col-md-offset-5 col-lg-2 col-lg-offset-5 col-sm-2 col-sm-offset-5">	
+			<?php echo $this->Form->input('id'); ?>		
+			<?php	echo $this->Form->input('description' , array('label' => array ('text' => 'Nombre :  ', 'class' => 'label-important'), 'class' => 'form-control' )); ?>
+			<?php	echo $this->Form->input('year_' , 		array('label' => array ('text' => 'Año :  ', 'class' => 'label-important'), 'class' => 'form-control' )); ?>
+			<?php	echo $this->Form->input('organization', array('label' => array ('text' => 'Organización :  ', 'class' => 'label-important'), 'class' => 'form-control' )); ?>
+			<br>
+			<?php echo $this->Form->submit(__('Guardar'), array ('class' => 'btn btn-success')); ?>
+		</div>	
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('Event.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Event.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Events'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Records'), array('controller' => 'records', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Record'), array('controller' => 'records', 'action' => 'add')); ?> </li>
-	</ul>
-</div>

@@ -1,7 +1,9 @@
 <div class="events index">
-	<h2> Eventos </h2>
 	<br>
-			<?php echo $this->Html->link('Nuevo Evento', array('action' => 'add')); ?>
+	<br>
+	<legend> Eventos </legend>
+	<br>
+		<?php echo $this->Html->link('Nuevo Evento', array('action' => 'add'), array ( 'class' => 'btn btn-info' , 'style' => 'float:right;')); ?>
 	<br>
 	<br>
 	<br>

@@ -1,23 +1,27 @@
 <div class="birds form">
 <?php echo $this->Form->create('Bird'); ?>
+	<br>
+	<br>
 	<fieldset>
-		<legend><?php echo __('Add Bird'); ?></legend>
-	<?php
-		echo $this->Form->input('ecology');
-		echo $this->Form->input('family_');
-		echo $this->Form->input('name_');
-		echo $this->Form->input('url');
-		echo $this->Form->input('distribution');
-	?>
+		<legend> Registrar Ave </legend>
+		<div class= "form-group">	
+			<div class="row">
+				<div class="col-md-6 col-lg-6 col-sm-6">
+					<?php echo $this->Form->input('name_' ,  array('label' => array ('text' => 'Nombre :  ', 'class' => 'label-important'), 'class' => 'form-control' )); ?>
+				</div>
+				<div class="col-md-6 col-lg-6 col-sm-6">
+					<?php echo $this->Form->input('family_' , array('label' => array ('text' => 'Familia :  ', 'class' => 'label-important'), 'class' => 'form-control' )); ?>
+				</div>
+			</div>
+			<?php echo $this->Form->input('ecology' , array('label' => array ('text' => 'Ecología :  ', 'class' => 'label-important'), 'class' => 'form-control' )); ?>
+			<?php echo $this->Form->input('distribution' , array('label' => array ('text' => 'Distribución :  ', 'class' => 'label-important'), 'class' => 'form-control' )); ?>
+			<br>
+			<?php echo $this->Form->submit(__('Guardar'), array ('class' => 'btn btn-success')); ?>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
 	<ul>
-
 		<li><?php echo $this->Html->link(__('List Birds'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Records'), array('controller' => 'records', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Record'), array('controller' => 'records', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

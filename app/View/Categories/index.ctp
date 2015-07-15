@@ -1,15 +1,15 @@
 <div class="categories index">
 	<h2><?php echo __('Categorías'); ?></h2>
 	<br>
-		<?php echo $this->Html->link('Nueva Categoría', array('action' => 'add')); ?>
+		<?php echo $this->Html->link('Nueva Categoría', array('action' => 'add'), array ( 'class' => 'btn btn-info')); ?>
 	<br>
 	<br>
 	<br>
 	<table class="table table-bordered">
 	<thead>
 	<tr>
-			<th>Descripción</th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th> Nombre categoría</th>
+			<th class="actions"> Acciones </th>
 	</tr>
 	</thead>
 	<tbody>
@@ -18,7 +18,7 @@
 		<td><?php echo h($category['Category']['description']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link('Modificar', array('action' => 'edit', $category['Category']['id'])); ?>
-			<?php echo $this->Form->postLink('Eliminar', array('action' => 'delete', $category['Category']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $category['Category']['id']))); ?>
+			<?php echo $this->Form->postLink('Eliminar', array('action' => 'delete', $category['Category']['id']), array('confirm' => '¿Estás segur@ de eliminar la categoría?')); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

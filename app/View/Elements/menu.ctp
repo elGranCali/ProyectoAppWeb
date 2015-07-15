@@ -19,7 +19,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Ver<span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><?php echo $this->Html->link('Aves',array('controller'=>'birds','action'=>'index')); ?></li>
-                <li><?php echo $this->Html->link('Categorias',array('controller'=>'categories','action'=>'index')); ?></li>
+                <li><?php echo $this->Html->link('Categorías',array('controller'=>'categories','action'=>'index')); ?></li>
                 <li><?php echo $this->Html->link('Registros',array('controller'=>'records','action'=>'index')); ?></li>
              
               </ul>
