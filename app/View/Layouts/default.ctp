@@ -56,7 +56,8 @@ $cakeVersion = __d('cake_dev', 'Dayner Umaña - Carlos Sanabria <br/>Desarrollo 
 <div class="col-xs-12 col-sm-12">
     <div class="row">
     <div class="col-xs-6 col-lg-4">
-        <div id = "footer">
+        <div id = "footer" class="footer" >
+			<hr>
             <?php echo $cakeVersion;?>
 
         </div>
