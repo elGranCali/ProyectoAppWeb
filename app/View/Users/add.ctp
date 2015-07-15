@@ -2,15 +2,22 @@
 <?php echo $this->Form->create('User'); ?>
 	<fieldset>
 		<legend> Registrar usuario </legend>
-	<?php
-		echo $this->Form->input('name_');
-		echo $this->Form->input('username');
-		echo $this->Form->input('password');
-		echo $this->Form->input('telephone');
-		echo $this->Form->input('degree');
-		echo $this->Form->input('category_id');
-	?>
-	</fieldset>
+
+		<div class="form-group">
+		<?php echo $this->Form->input('name_', array('label' => array ('text' => 'Nombre:  ', 'class' => 'label-important'), 'class' => 'form-control' )); ?>
+		<?php echo $this->Form->input('telephone',  array('label' => array ('text' => 'Teléfono:  ', 'class' => 'label-important'), 'class' => 'form-control')); ?>
+		<?php echo $this->Form->input('degree' ,  array('label' => array ('text' => 'Grado académico:  ', 'class' => 'label-important'), 'class' => 'form-control')); ?>
+		<?php echo $this->Form->input('category_id' ,  array('label' => array ('text' => 'Categoría:  ', 'class' => 'label-important'), 'class' => 'form-control')); ?>
+		<div class="row">
+		<div class="col-md-6">
+		<?php echo $this->Form->input('username',  array('label' => array ('text' => 'Nombre de usuario:  ', 'class' => 'label-important'), 'class' => 'form-control')); ?>
+		</div>
+		<div class="col-md-6">		
+		<?php echo $this->Form->input('password',  array('label' => array ('text' => 'Contraseña:  ', 'class' => 'label-important'), 'class' => 'form-control')); ?>
+		</div>
+		</div>
+		</div>
+		</fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
 
