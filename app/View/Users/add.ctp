@@ -1,7 +1,7 @@
 <div class="users form">
 <?php echo $this->Form->create('User'); ?>
 	<fieldset>
-		<legend> <br> Registrar usuario </legend>
+		<legend> <br> Nuevo Usuario </legend>
 		<div class="form-group">
 		<br>
 		<?php echo $this->Form->input('name_', array('label' => array ('text' => 'Nombre:  ', 'class' => 'label-important'), 'class' => 'form-control' )); ?>
