@@ -23,8 +23,7 @@
 		</dd>
 		<dt><?php echo __('Url'); ?></dt>
 		<dd>
-			<?php echo h($bird['Bird']['url']); ?>
-			&nbsp;
+			<?php echo $this->Html->image(urldecode($bird['Bird']['name_']).'.jpg', array('alt' => 'CakePHP')); ?>
 		</dd>
 		<dt><?php echo __('Distribution'); ?></dt>
 		<dd>

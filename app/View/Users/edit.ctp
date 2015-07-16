@@ -1,4 +1,5 @@
 <div class="users form">
+	<br>
 <?php echo $this->Form->create('User'); ?>
 	<fieldset>
 		<legend> Editar Usuario </legend>
@@ -19,20 +20,17 @@
 		</div>
 		<div class="col-md-6">		
 		<br>
-		<?php echo $this->Form->input('password',  array('label' => array ('text' => 'Contraseña:  ', 'class' => 'label-important'), 'class' => 'form-control')); ?>
+		<?php echo $this->Form->input('password',  array('label' => array ('text' => 'Contraseña:  ', 'class' => 'label-important'), 'class' => 'form-control', 'value' => '')); ?>
 		</div>
 		</div>
 		</div>
 	</fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
+		<br>
+		<br>
+		<?php echo $this->Form->submit('Guardar', array ('class' => 'btn btn-success')); ?>
+		<br>
+		<br>
+		<br>
+		<br>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
 
-		<li><?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $this->Form->value('User.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('User.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
-		<li><?php echo $this->Html->link(__('List Categories'), array('controller' => 'categories', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Category'), array('controller' => 'categories', 'action' => 'add')); ?> </li>
-	</ul>
-</div>

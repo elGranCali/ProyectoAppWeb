@@ -1,11 +1,9 @@
 <div class="container">
-
-    <div class="row row-offcanvas row-offcanvas-right">
-
-        <div class="col-xs-12 col-sm-12">
-	<h2><?php echo __('Control de Aves'); ?></h2>
 	<br>
-		<?php echo $this->Html->link('Registrar ave', array('action' => 'add')); ?>
+	<br>
+	<legend> Aves </legend>
+	<br>
+		<?php echo $this->Html->link('Nueva Ave', array('action' => 'add'), array ( 'class' => 'btn btn-info' , 'style' => 'float:right;')); ?>
 	<br>
 	<br>
 	<br>
@@ -14,8 +12,6 @@
 	<tr>
 			<th> Nombre </th>
 			<th> Familia </th>
-			<th> Ecología </th>
-			<th> Distribución </th>
 			<th> Acciones </th>
 	</tr>
 	</thead>
@@ -24,13 +20,10 @@
 	<tr>
 		<td><?php echo h($bird['Bird']['name_']); ?>&nbsp;</td>
 		<td><?php echo h($bird['Bird']['family_']); ?>&nbsp;</td>
-		<td><?php echo h($bird['Bird']['ecology']); ?>&nbsp;</td>
-		<td><?php echo h($bird['Bird']['distribution']); ?>&nbsp;</td>
 
 		<td class="actions">
 			<?php echo $this->Html->link( 'Ver', array('action' => 'view', $bird['Bird']['id'])); ?>
 			<?php echo $this->Html->link( 'Modificar', array('action' => 'edit', $bird['Bird']['id'])); ?>
-			<?php echo $this->Form->postLink( 'Eliminar', array('action' => 'delete', $bird['Bird']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $bird['Bird']['id']))); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
@@ -44,6 +37,4 @@
 	?>
 	</div>
 
-</div>
-</div>
 </div>

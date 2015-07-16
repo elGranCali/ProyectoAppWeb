@@ -3,6 +3,9 @@
 	<br>
 	<br>
 	<fieldset>
+		<?php echo $this->Html->link('Consultar Aves', array('action' => 'index'), array ( 'class' => 'btn btn-info' , 'style' => 'float:right;')); ?>
+		<br>
+		<br>
 		<legend> Registrar Ave </legend>
 		<div class= "form-group">	
 			<div class="row">
@@ -18,10 +21,4 @@
 			<br>
 			<?php echo $this->Form->submit(__('Guardar'), array ('class' => 'btn btn-success')); ?>
 	</fieldset>
-</div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('List Birds'), array('action' => 'index')); ?></li>
-	</ul>
 </div>
