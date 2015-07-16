@@ -14,7 +14,7 @@
 			<th> Nombre </th>
 			<th> Organización </th>
 			<th> Año </th>
-			<th class="actions"> Eventos </th>
+			<th class="actions"> Acciones </th>
 	</tr>
 	</thead>
 	<tbody>
