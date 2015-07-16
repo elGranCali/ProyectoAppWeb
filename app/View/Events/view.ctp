@@ -58,7 +58,7 @@
 			<td class="actions">
 				<?php echo $this->Html->link(__('View'), array('controller' => 'records', 'action' => 'view', $record['id'])); ?>
 				<?php echo $this->Html->link(__('Edit'), array('controller' => 'records', 'action' => 'edit', $record['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'records', 'action' => 'delete', $record['id']), array(), __('Are you sure you want to delete # %s?', $record['id'])); ?>
+				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'records', 'action' => 'delete', $record['id']), array(), __('¿Estás segur@ de eliminar el evento?')); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>

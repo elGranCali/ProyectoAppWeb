@@ -24,7 +24,7 @@
 		<td><?php echo h($event['Event']['year_']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link('Modificar', array('action' => 'edit', $event['Event']['id'])); ?>
-			<?php echo $this->Form->postLink('Eliminar', array('action' => 'delete', $event['Event']['id']), array('confirm' => __('Are you sure you want to delete # %s?', $event['Event']['id']))); ?>
+			<?php echo $this->Form->postLink('Eliminar', array('action' => 'delete', $event['Event']['id']), array('confirm' => __('¿Estás segur@ de eliminar el evento?'))); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

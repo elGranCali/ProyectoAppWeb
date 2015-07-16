@@ -25,7 +25,7 @@
 		</fieldset>
 		<br>
 		<br>
-		<?php echo $this->Form->submit('Registrarse', array ('class' => 'btn btn-success')); ?>
+		<?php echo $this->Form->submit('Registrarse', array ('class' => 'btn btn-success'), array('action' => 'login')); ?>
 		<br>
 		<br>
 		<br>

@@ -68,7 +68,7 @@ class UsersController extends AppController {
 			$this->User->create();
 			if ($this->User->save($this->request->data)) {
 				$this->Session->setFlash(__('El usuario ha sido guardado.'));
-				return $this->redirect(array('action' => 'index'));
+				return $this->redirect(array('action' => 'login'));
 			} else {
 				$this->Session->setFlash(__('El usuario no ha sido guardado. Por favor, intente de nuevo.'));
 			}
@@ -121,6 +121,6 @@ class UsersController extends AppController {
 		} else {
 			$this->Session->setFlash(__('El usuario no se ha borrado. Por favo intente de nuevo.'));
 		}
-		return $this->redirect(array('action' => 'index'));
+		return $this->redirect(array('controller' => 'pages', 'action' => 'display', 'home'));
 	}
 }
