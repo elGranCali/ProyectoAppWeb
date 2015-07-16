@@ -1,7 +1,7 @@
 <div class="categories index">
 	<h2><?php echo __('Categorías'); ?></h2>
 	<br>
-		<?php echo $this->Html->link('Nueva Categoría', array('action' => 'add'), array ( 'class' => 'btn btn-info')); ?>
+		<?php echo $this->Html->link('Nueva Categoría', array('action' => 'add'), array ( 'class' => 'btn btn-info', 'style' => 'float:right;')); ?>
 	<br>
 	<br>
 	<br>

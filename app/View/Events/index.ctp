@@ -7,20 +7,21 @@
 	<br>
 	<br>
 	<br>
+	
 	<table class="table table-bordered">
 	<thead>
 	<tr>
+			<th> Nombre </th>
 			<th> Organización </th>
-			<th> Descripción </th>
 			<th> Año </th>
-			<th class="actions"><?php echo __('Actions'); ?></th>
+			<th class="actions"> Eventos </th>
 	</tr>
 	</thead>
 	<tbody>
 	<?php foreach ($events as $event): ?>
 	<tr>
-		<td><?php echo h($event['Event']['organization']); ?>&nbsp;</td>
 		<td><?php echo h($event['Event']['description']); ?>&nbsp;</td>
+		<td><?php echo h($event['Event']['organization']); ?>&nbsp;</td>
 		<td><?php echo h($event['Event']['year_']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link('Modificar', array('action' => 'edit', $event['Event']['id'])); ?>
