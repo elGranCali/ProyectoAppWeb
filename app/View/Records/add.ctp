@@ -22,8 +22,8 @@
 				<?php 	echo $this->Form->input('description' , array('label' => array ('text' => 'Descripción :  ', 'class' => 'label-important'), 'class' => 'form-control' )); ?> 		
 			</div>
 			<br>
-			<div class="form-control" >
-				<?php 	echo $this->Form->input('time_' , array('label' => array ('text' => 'Hora del registro :  ', 'class' => 'label-important'))); ?>
+			<div class="" >
+				<?php 	echo $this->Form->input('time_' , array('label' => array ('text' => 'Hora del registro :  ', 'class' => 'form-group'))); ?>
 				<br>
 				<?php echo $this->Form->submit(__('Guardar'), array ('class' => 'btn btn-success')); ?>
 			</div>

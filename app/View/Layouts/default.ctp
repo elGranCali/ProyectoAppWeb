@@ -50,17 +50,12 @@ $cakeVersion = __d('cake_dev', 'Dayner Umaña - Carlos Sanabria <br/>Desarrollo 
     </div>
 
 </div>
-<div class="container">
-
-<div class="col-xs-12 col-sm-12">
-    <div class="row">
+    <div">
 		<hr>
         <div id = "footer" class="text-center">
             <p><?php echo $cakeVersion;?> </p>
         </div>
     </div>
-    </div>
-</div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
